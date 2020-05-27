@@ -22,16 +22,12 @@ function Phrase(content) {
     return Array.from(this.content).filter(c => c.match(lettersRegEx)).join("");
   }
 
-
-  // this.letters = function letters() {
-  //   return (this.content.match(/[a-z]/gi) || []).join("");
-  // }
-
   // Returns true if the phrase is a palindrome, false otherwise.
   this.palindrome = function palindrome() {
     if (this.content) {
     return this.processedContent() === this.processedContent().reverse();
-  } else {
+    } else {
     return false;
+    }
   }
 }
